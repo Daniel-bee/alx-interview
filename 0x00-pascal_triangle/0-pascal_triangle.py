@@ -3,6 +3,7 @@
 Pascal's Triangle
 """
 
+
 def pascal_triangle(n):
     """
     returns a list of integers in a pascal triangle format
@@ -19,7 +20,7 @@ def pascal_triangle(n):
         right = 0
         in_pas = []
         for j in range(i + 1):
-            num = 0 
+            num = 0
             if left > -1:
                 num += pascal[i - 1][left]
             if right < i:
