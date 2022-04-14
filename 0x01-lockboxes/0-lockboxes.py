@@ -7,7 +7,7 @@ def canUnlockAll(boxes):
     """
     a method that determines if all the boxes can be opened.
     """
-    if len(boxes) == 0:
+    if type(boxes) is not list:
         return False
     if len(boxes[0]) == 1:
         issamenumber = True
