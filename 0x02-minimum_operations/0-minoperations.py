@@ -18,6 +18,4 @@ def minOperations(n):
     if not minOp:
         return 0
     minOp.sort()
-    if len(minOp) > 1:
-        return minOp[-2]
     return minOp[0]
