@@ -24,8 +24,6 @@ def minOperations(n):
     """
     if n <= 0:
         return 0
-    if isPrime(n) or n == 1:
-        return n
     minOp = []
     for x in range(2, int((n / 2) + 1)):
         for y in range(1, int((n / 2) + 1)):
