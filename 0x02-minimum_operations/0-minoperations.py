@@ -18,4 +18,4 @@ def minOperations(n):
     if not minOp:
         return 0
     minOp.sort()
-    return minOp[0]
+    return int(minOp[0])
