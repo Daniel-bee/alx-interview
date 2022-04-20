@@ -16,4 +16,4 @@ def minOperations(n):
         while n % x == 0:
             minOp += x
             n /= x
-    return minOp
+    return int(minOp)
