@@ -13,7 +13,7 @@ def minOperations(n):
         return 0
     minOp = 0
     for x in range(2, n):
-        while n % x == 0:
+        while int(n) % x == 0:
             minOp += x
             n /= x
     return int(minOp)
