@@ -7,18 +7,16 @@ def validUTF8(data):
     determines if a given data set represents a valid UTF-8 encoding.
     """
     count = 0
-    for char in data:
-        if count == 0:
-            if (char >> 5) == 0b110:
-                count = 1
-            elif (char >> 4) == 0b1110:
-                count = 2
-            elif (char >> 3) == 0b11110:
-                count = 3
-            elif (char >> 7):
-                return False
-        else:
-            if (char >> 6) != 0b10:
+    for i, n in enumerate(data):
+        byte = n & 0xFF
+        if count:
+            if byte >> 6 != 2:
                 return False
             count -= 1
+            continue
+        while (1 << abs(7 - count)) & byte:
+            count += 1
+        if count == 1 or count > 4:
+            return False
+        count = max(count - 1, 0)
     return count == 0
