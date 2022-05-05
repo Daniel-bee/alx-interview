@@ -19,4 +19,4 @@ def validUTF8(data):
         if count == 1 or count > 4:
             return False
         count = max(count - 1, 0)
-    return True
+    return count == 0
