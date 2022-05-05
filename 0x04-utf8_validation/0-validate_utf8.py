@@ -8,7 +8,7 @@ def validUTF8(data):
     """
     flag = 1
     for num in data:
-        if num > 0 and num < 127:
+        if (num & 255) == 0:
             flag = 0
             break
     if flag:
