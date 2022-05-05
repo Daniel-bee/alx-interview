@@ -8,6 +8,8 @@ def validUTF8(data):
     """
     count = 0
     for char in data:
+        if (char & 255) == 0:
+            return False
         if count == 0:
             if (char >> 5) == 0b110:
                 count = 1
