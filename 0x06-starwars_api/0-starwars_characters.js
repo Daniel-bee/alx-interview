@@ -1,4 +1,4 @@
-!/usr/bin/node
+#!/usr/bin/node
 /* Star Wars Characters - Using the request module */
 const request = require('request');
 const urlApi = 'https://swapi-api.hbtn.io/api/films/';
