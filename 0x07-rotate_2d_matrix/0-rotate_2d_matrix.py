@@ -10,7 +10,7 @@ def rotate_2d_matrix(matrix):
     """
     N = len(matrix)
     for i in range(len(matrix) // 2):
-        for j in range(len(matrix) - i - 1):
+        for j in range(i, len(matrix) - i - 1):
             temp = matrix[i][j]
             matrix[i][j] = matrix[N - 1 - j][i]
             matrix[N - 1 - j][i] = matrix[N - 1 - i][N - 1 - j]
