@@ -2,7 +2,6 @@
 """
 Rotate 2D Matrix
 """
-import copy
 
 
 def rotate_2d_matrix(matrix):
